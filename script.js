@@ -1,9 +1,10 @@
-// Botão para abrir o relatório na mesma aba
+// Abrir Relatório numa nova aba
 document.getElementById("relatorioBtn").addEventListener("click", function() {
-    window.location.href = "relatorio.html";
+    window.open("relatorio.html", "_blank"); // _blank abre em nova aba
 });
 
-// Botão para abrir a página de pseudocódigo na mesma aba
+// Abrir Pseudocódigo numa nova aba
 document.getElementById("pseudocodigoBtn").addEventListener("click", function() {
-    window.location.href = "pseudocodigo.html";
+    window.open("pseudocodigo.html", "_blank");
 });
+
