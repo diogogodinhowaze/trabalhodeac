@@ -1,0 +1,212 @@
+/* Reset e estilo geral */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d1117;
+    color: #f0f6fc;
+}
+
+/* Container principal para layout vertical */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #161b22;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    color: #58a6ff;
+    font-size: 1.6rem;
+}
+
+nav button {
+    background-color: #21262d;
+    color: #f0f6fc;
+    border: 1px solid #30363d;
+    padding: 0.6rem 1.2rem;
+    margin-left: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background-color: #238636;
+    border-color: #2ea043;
+}
+
+/* Main ocupa espaço restante */
+main {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Caixa de mensagens e pseudocódigos */
+.mensagem-box, .pseudocodigo-box {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 80%;
+    margin: 1rem auto;
+    text-align: left;
+}
+
+.pseudocodigo-box {
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+/* Painéis lado a lado */
+.panel-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+}
+
+/* Painéis estilo código */
+.pseudocodigo-panel {
+    background-color: #161b22; /* aparência escura consistente */
+    color: #f0f6fc;
+    border: 2px solid #30363d;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    padding: 1rem 1.5rem;
+    width: 45%;
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    text-align: left;
+    line-height: 1.4;
+}
+
+/* Alinha texto dentro de <pre> à esquerda */
+.pseudocodigo-panel pre {
+    text-align: left;
+}
+
+/* Scroll personalizado */
+.pseudocodigo-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.pseudocodigo-panel::-webkit-scrollbar-track {
+    background: #2a2a2a;
+    border-radius: 10px;
+}
+
+.pseudocodigo-panel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 2px solid #2a2a2a;
+}
+
+/* Títulos dentro do painel */
+.pseudocodigo-panel h2 {
+    color: #569cd6;
+    margin-bottom: 0.5rem;
+}
+
+/* Botão "Voltar" */
+.btn {
+    background-color: #21262d;
+    color: #f0f6fc;
+    border: 1px solid #30363d;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #238636;
+    border-color: #2ea043;
+}
+
+/* Footer sempre no fundo */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #161b22;
+    border-top: 1px solid #30363d;
+}
+
+/* Responsivo: empilha painéis em telas pequenas */
+@media (max-width: 900px) {
+    .panel-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pseudocodigo-panel, .mensagem-box, .pseudocodigo-box {
+        width: 90%;
+    }
+}
+
+/* Painéis estilo JPanel com aparência de código */
+.pseudocodigo-panel {
+    background-color: #f9f9f9;
+    color: #151515;
+    border: 2px solid #30363d;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    padding: 1rem 1.5rem;
+    width: 45%;
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    line-height: 1.4;
+}
+
+/* Faz o texto do pseudocódigo alinhar à esquerda */
+.pseudocodigo-panel pre {
+    text-align: left;
+}
+
+/* Scroll personalizado */
+.pseudocodigo-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.pseudocodigo-panel::-webkit-scrollbar-track {
+    background: #2a2a2a;
+    border-radius: 10px;
+}
+
+.pseudocodigo-panel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 2px solid #2a2a2a;
+}
+
+/* Títulos dentro do painel */
+.pseudocodigo-panel h2 {
+    color: #569cd6;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsivo: empilha painéis em telas pequenas */
+@media (max-width: 900px) {
+    .pseudocodigo-panel {
+        width: 90%;
+    }
+}
