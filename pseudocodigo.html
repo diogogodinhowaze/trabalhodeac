@@ -57,55 +57,61 @@ Fim
 
             <!-- Painel Direito: Raiz de Inteiros -->
             <div class="pseudocodigo-panel">
-                <h2>Raiz de Inteiros</h2>
+                <h2>Raiz </h2>
 <pre>
-Raiz Quadrada
+Raiz 
 
-Inicio
+Início
     Ler N
-    
-    Se N < 0 Entao
-        Escrever "Erro nao exitem raizes de numeros negativos"
-    Senao Se N = 0 Entao
-        Mostrar N
+
+    Se N < 0 Então
+        Escrever "Erro: não existem raízes de números negativos"
+    Senao Se N = 0 Então
+        Escrever "Raiz = 0"
     Senao
-        Separar digitos de N em pares
-        qntPares = Numero de Pares de Digitos
+        Se N tem vírgula Então
+            Separar parte inteira e decimal
+        Senao
+            parte decimal = 0
+        Fim Se
+
+        // Separar dígitos em pares
+        Criar pares a partir da parte inteira (da direita para a esquerda)
+        Criar pares a partir da parte decimal (da esquerda para a direita)
+        qntA = número de pares da parte inteira
+        qntD = número de pares da parte decimal
+        qntPares = qntA + qntD
+
         Resto = 0
         Raiz = 0
-        
-        Selecionar par mais a esquerda
-        
-        Enquanto qntPares > 0 Faca
+        Selecionar par mais à esquerda
+
+        Enquanto qntPares > 0 Faça
             Resto = (Resto * 100) + parAtual
             a = 0
-            
+
             Repetir
-                Se (20 * Raiz + a) * a <= Resto Entao
-	            a = a + 1
-                    Se a = 9 Entao
-                        Interromper
-                    Senao
-                        a = a + 1
-                    Fim Se
+                Se (20 * Raiz + a) * a <= Resto Então
+                    a = a + 1
                 Senao
                     a = a - 1
                     Interromper
                 Fim Se
-            Ate Falso
-            
+            Até Falso
+
             Resto = Resto - (20 * Raiz + a) * a
             Raiz = (Raiz * 10) + a
-            
-            Selecionar proximo par
+
+            Selecionar próximo par
             qntPares = qntPares - 1
         Fim Enquanto
-        
-        Mostrar Raiz e Resto
-    Fim Se
+
+        // Colocar a vírgula na raiz após qntA dígitos
+        Inserir vírgula em Raiz depois de qntA dígitos
+        Escrever "Raiz ≈ ", Raiz
+        Escrever "Resto = ", Resto
+    Fim Se
 Fim
-
-
 </pre>
             </div>
         </section>
@@ -116,3 +122,4 @@ Fim
     </footer>
 </body>
 </html>
+
